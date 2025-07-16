@@ -49,7 +49,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     
-    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -66,4 +65,4 @@ jobs:
         with:
           app-name: 'finweb-mattmooney'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E79EEE0E9C6F462E890428CBBC6B655E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BE1E9148C5D642C4B47F1ACC5567F3C0 }}
