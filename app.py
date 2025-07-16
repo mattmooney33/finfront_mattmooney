@@ -77,6 +77,7 @@ def delete_price():
         except Exception as e:
             result = {"error": str(e)}
     return render_template('delete_price.html', result=result)
+
 @app.route('/slow-endpoint')
 def slow_endpoint():
     if 'user' not in session:
