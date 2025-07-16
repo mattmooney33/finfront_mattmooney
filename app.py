@@ -95,6 +95,11 @@ def slow_endpoint():
 @app.route('/logout')
 def logout():
     session.clear()
+    @app.route('/api/slow-endpoint')
+def slow_endpoint():
+    time.sleep(5)
+    return "This was a slow response after 5 seconds"
+
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
